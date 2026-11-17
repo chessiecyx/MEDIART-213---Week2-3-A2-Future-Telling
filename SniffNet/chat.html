@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Messages | SniffNet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="chat.css">
+  <script src="chat.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-icon">✿</span>
+        SniffNet
+        <span class="brand-sparkle">✦</span>
+      </a>
+
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Explore</a>
+        <a href="friends.html" class="nav-link active">Friends</a>
+        <a href="profile.html" class="nav-link">My Profile</a>
+      </nav>
+
+      <a href="profile.html"
+         class="top-avatar"
+         aria-label="Pineapple's profile">
+        <img src="assets/avatar/Pineapple.jpg" alt="Pineapple">
+      </a>
+
+    </div>
+  </header>
+
+  <main class="chat-page">
+
+    <a href="friends.html" class="back-link">
+      ← Back to Friends
+    </a>
+
+    <section class="chat-card" aria-label="Chat conversation">
+
+      <header class="chat-header">
+
+        <div class="chat-friend-avatar">
+          <img id="friend-avatar" src="" alt="">
+          <span id="friend-status-dot" class="status-dot"></span>
+        </div>
+
+        <div class="chat-friend-info">
+          <h1 id="friend-name">Friend</h1>
+          <p id="friend-status">Online</p>
+        </div>
+
+        <span class="chat-header-decoration">✿</span>
+
+      </header>
+
+      <div class="chat-messages"
+           id="chat-messages"
+           role="log"
+           aria-label="Messages"
+           aria-live="polite"
+           aria-relevant="additions">
+      </div>
+
+      <form class="chat-input-area" id="chat-form">
+
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Type a message..."
+          aria-label="Type a message"
+          maxlength="500"
+          autocomplete="off"
+          required
+        >
+
+        <button type="submit" class="send-btn">
+          <span>Send</span>
+          <span aria-hidden="true">➤</span>
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    SniffNet © 2060 · Every little creature deserves a voice ♡
+  </footer>
+
+</body>
+</html>

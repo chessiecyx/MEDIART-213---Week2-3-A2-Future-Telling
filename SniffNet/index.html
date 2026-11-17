@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore | SniffNet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="explore.css">
+  <script src="posts-data.js" defer></script>
+  <script src="explore.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-icon">✿</span>
+        SniffNet
+        <span class="brand-sparkle">✦</span>
+      </a>
+
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html"
+           class="nav-link active"
+           aria-current="page">Explore</a>
+
+        <a href="friends.html"
+           class="nav-link">Friends</a>
+
+        <a href="profile.html"
+           class="nav-link">My Profile</a>
+      </nav>
+
+      <a href="profile.html"
+         class="top-avatar"
+         aria-label="Open Pineapple's profile">
+        <img src="assets/avatar/Pineapple.jpg"
+             alt="Pineapple">
+      </a>
+
+    </div>
+  </header>
+
+  <main class="explore-layout">
+
+    <section class="feed-column"
+             aria-label="Explore animal posts">
+
+      <div id="explore-feed"
+           class="explore-feed"></div>
+
+      <div class="load-more-wrap">
+        <button id="load-more"
+                class="load-more-btn"
+                type="button">
+          Load More Posts ↓
+        </button>
+
+        <p id="feed-end-message"
+           class="feed-end-message"
+           hidden>
+          You've sniffed every corner of the feed! ♡
+        </p>
+      </div>
+
+    </section>
+
+    <aside class="right-sidebar">
+
+      <div class="side-card daily-note">
+        <span class="note-sticker">✿</span>
+        <span class="tiny-label">A LITTLE REMINDER</span>
+
+        <h3>Be kind to every creature.</h3>
+
+        <p>
+          Some friends bark, some chirp,
+          some hiss, and some just want to nap.
+        </p>
+
+        <div class="note-signature">
+          — The SniffNet Team ♡
+        </div>
+      </div>
+
+      <div class="side-card friends-card">
+
+        <img src="assets/stickers/Ball.png"
+             class="friends-ball-sticker"
+             alt=""
+             aria-hidden="true">
+
+        <div class="friends-heading">
+          <h3>My Friends</h3>
+          <span class="friends-count">2 online</span>
+        </div>
+
+        <div class="friends-list">
+
+          <div class="friend-item">
+            <a href="chat.html?friend=Lamy"
+               class="friend-avatar-wrap"
+               aria-label="Chat with Lamy">
+
+              <img src="assets/friends/Lamy.jpg"
+                   alt="Lamy">
+
+              <span class="status-dot online"
+                    aria-label="Online"></span>
+            </a>
+
+            <div class="friend-info">
+              <strong>Lamy</strong>
+              <span>Online</span>
+            </div>
+          </div>
+
+          <div class="friend-item">
+            <a href="chat.html?friend=Pico"
+               class="friend-avatar-wrap"
+               aria-label="Chat with Pico">
+
+              <img src="assets/friends/Pico.jpg"
+                   alt="Pico">
+
+              <span class="status-dot online"
+                    aria-label="Online"></span>
+            </a>
+
+            <div class="friend-info">
+              <strong>Pico</strong>
+              <span>Online</span>
+            </div>
+          </div>
+
+          <div class="friend-item">
+            <a href="chat.html?friend=Ocean"
+               class="friend-avatar-wrap"
+               aria-label="Chat with Ocean">
+
+              <img src="assets/friends/Ocean.jpg"
+                   alt="Ocean">
+
+              <span class="status-dot offline"
+                    aria-label="Offline"></span>
+            </a>
+
+            <div class="friend-info">
+              <strong>Ocean</strong>
+              <span>Offline</span>
+            </div>
+          </div>
+
+          <div class="friend-item">
+            <a href="chat.html?friend=McDull"
+               class="friend-avatar-wrap"
+               aria-label="Chat with McDull">
+
+              <img src="assets/friends/McDull.jpg"
+                   alt="McDull">
+
+              <span class="status-dot offline"
+                    aria-label="Offline"></span>
+            </a>
+
+            <div class="friend-info">
+              <strong>McDull</strong>
+              <span>Offline</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>SniffNet © 2060</span>
+    <span>Made for every creature, big or small. ♡</span>
+  </footer>
+</body>
+</html>

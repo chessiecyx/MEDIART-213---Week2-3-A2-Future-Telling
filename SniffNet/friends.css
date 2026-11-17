@@ -1,0 +1,635 @@
+
+:root {
+    --cream: #fffaf0;
+    --paper: #fffdf8;
+    --yellow: #ffe7a2;
+    --orange: #f49b54;
+    --orange-dark: #d8793e;
+    --pink: #ffd9d6;
+    --brown: #503b30;
+    --muted: #927e70;
+    --border: #e8d5b9;
+    --shadow: 4px 5px 0 rgba(118, 82, 53, .10);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    color: var(--brown);
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--cream);
+    background-image:
+      linear-gradient(rgba(232,204,164,.18) 1px, transparent 1px),
+      linear-gradient(90deg,rgba(232,204,164,.18) 1px, transparent 1px);
+    background-size: 27px 27px;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  button {
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,253,248,.97);
+    border-bottom: 2px solid var(--border);
+  }
+  
+  .topbar-inner {
+    max-width: 1350px;
+    margin: auto;
+    padding: 13px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--orange-dark);
+    white-space: nowrap;
+  }
+  
+  .brand-icon {
+    color: #efae53;
+    font-size: 29px;
+  }
+  
+  .brand-sparkle {
+    color: #e5a4a2;
+    font-size: 16px;
+    align-self: flex-start;
+  }
+  
+  .topnav {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    padding: 10px 17px;
+    border-radius: 22px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background .2s, transform .2s;
+  }
+  
+  .nav-link:hover {
+    background: #fff0d5;
+    transform: translateY(-2px);
+  }
+  
+  .nav-link.active {
+    background: var(--yellow);
+    color: #9a5a27;
+    border: 1px solid #e8c17e;
+  }
+  
+  .top-avatar {
+    display: block;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid var(--orange);
+    background: white;
+  }
+  
+  .top-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .friends-page {
+    max-width: 900px;
+    margin: 42px auto 75px;
+    padding: 0 24px;
+  }
+  
+  .page-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .page-intro h1 {
+    margin: 8px 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+  }
+  
+  .page-intro h1 span {
+    color: #e9a3a0;
+  }
+  
+  .page-intro p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  
+  .friends-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 125px;
+    padding: 16px;
+    border: 2px solid #e6c78d;
+    border-radius: 22px;
+    background: var(--yellow);
+    transform: rotate(4deg);
+    box-shadow: 4px 5px 0 #ecd6b0;
+  }
+  
+  .friends-total strong {
+    font-family: "Fredoka", sans-serif;
+    font-size: 35px;
+    line-height: 1;
+  }
+  
+  .friends-total span {
+    margin-top: 6px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .friends-collection {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+  
+  .friend-card {
+    position: relative;
+    background: var(--paper);
+    border: 2px solid var(--border);
+    border-radius: 24px;
+    padding: 26px 29px 22px;
+    box-shadow: var(--shadow);
+    transition: transform .2s, box-shadow .2s;
+  }
+  
+  .friend-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 8px 0 rgba(118,82,53,.12);
+  }
+  
+  .friend-card:nth-child(2) {
+    background: #fff9f4;
+  }
+  
+  .friend-card:nth-child(3) {
+    background: #fffdf3;
+  }
+  
+  .friend-card:nth-child(4) {
+    background: #f9fbf3;
+  }
+  
+  .friend-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .friend-photo {
+    position: relative;
+    flex-shrink: 0;
+    width: 125px;
+    height: 125px;
+  }
+  
+  .friend-photo-trigger {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: zoom-in;
+  }
+  
+  .friend-photo-trigger img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffe5ae;
+    transition: transform .25s ease;
+  }
+  
+  .friend-card:hover .friend-photo-trigger img {
+    transform: rotate(-5deg) scale(1.04);
+  }
+  
+  .friend-card:nth-child(even):hover .friend-photo-trigger img {
+    transform: rotate(5deg) scale(1.04);
+  }
+  
+  .friend-photo-trigger:hover img,
+  .friend-photo-trigger:focus-visible img {
+    transform: rotate(-5deg) scale(1.08);
+  }
+  
+  .friend-photo-trigger:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 5px;
+  }
+  
+  .status-dot {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    width: 22px;
+    height: 22px;
+    border: 4px solid var(--paper);
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .status-dot.online {
+    background: #70bd70;
+  }
+  
+  .status-dot.offline {
+    background: #a6a6a6;
+  }
+
+  .friend-details {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .friend-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  
+  .friend-title-row h2 {
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 31px;
+    font-weight: 600;
+  }
+  
+  .status-label {
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+  
+  .online-label {
+    color: #57924c;
+    background: #e4f1de;
+  }
+  
+  .offline-label {
+    color: #898989;
+    background: #efefed;
+  }
+  
+  .friend-species {
+    margin: 7px 0;
+    font-size: 14px;
+    color: #9b6f4e;
+    font-weight: 700;
+  }
+  
+  .detail-divider {
+    padding: 0 7px;
+    color: #c8b5a2;
+  }
+  
+  .friend-location {
+    margin: 9px 0 16px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  
+  .friend-bio {
+    display: inline-block;
+    max-width: 100%;
+    background: #fff1d8;
+    border: 1px solid #f0d7ac;
+    border-radius: 14px;
+    padding: 11px 16px;
+    transform: rotate(-1deg);
+  }
+  
+  .friend-card:nth-child(even) .friend-bio {
+    transform: rotate(1deg);
+  }
+  
+  .bio-label {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #bc8859;
+    margin-bottom: 5px;
+  }
+  
+  .friend-bio p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .friend-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+    padding-top: 17px;
+    border-top: 1px dashed #e8d7bf;
+  }
+  
+  .message-btn,
+  .follow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 115px;
+    padding: 11px 19px;
+    border-radius: 24px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform .2s, background .2s;
+  }
+  
+  .message-btn {
+    background: var(--yellow);
+    border: 2px solid #e7bf7c;
+    color: #965e31;
+  }
+  
+  .message-btn:hover {
+    background: #ffda82;
+    transform: translateY(-2px);
+  }
+  
+  .follow-btn {
+    background: #fffdf8;
+    border: 2px solid #dfcbb1;
+    color: #8c7565;
+  }
+  
+  .follow-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .follow-btn:not(.following) {
+    background: #e4f1de;
+    border-color: #a8cc9d;
+    color: #58864d;
+  }
+
+  .site-footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .friend-lightbox[hidden] {
+    display: none;
+  }
+  
+  .friend-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 24px;
+    background: rgba(24, 18, 16, .76);
+    backdrop-filter: blur(3px);
+    animation: lightboxFadeIn .2s ease;
+  }
+  
+  .lightbox-image {
+    display: block;
+    max-width: min(85vw, 750px);
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    border: 5px solid #fffdf7;
+    box-shadow: 0 15px 55px rgba(0,0,0,.35);
+    animation: lightboxZoomIn .25s ease;
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #fffdf7;
+    color: #70503a;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform .2s ease;
+  }
+  
+  .lightbox-close:hover {
+    transform: rotate(90deg);
+  }
+  
+  @keyframes lightboxFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes lightboxZoomIn {
+    from {
+      opacity: 0;
+      transform: scale(.88);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .topbar-inner {
+      padding: 12px 15px;
+      gap: 10px;
+    }
+  
+    .brand {
+      font-size: 23px;
+    }
+  
+    .brand-icon {
+      font-size: 22px;
+    }
+  
+    .brand-sparkle {
+      display: none;
+    }
+  
+    .topnav {
+      gap: 2px;
+    }
+  
+    .nav-link {
+      padding: 8px 9px;
+      font-size: 13px;
+    }
+  
+    .top-avatar {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .friends-page {
+      margin-top: 28px;
+      padding: 0 15px;
+    }
+  
+    .page-intro h1 {
+      font-size: 35px;
+    }
+  
+    .friends-total {
+      min-width: 95px;
+      padding: 12px;
+    }
+  
+    .friends-total strong {
+      font-size: 29px;
+    }
+  
+    .friend-card {
+      padding: 19px;
+    }
+  
+    .friend-main {
+      gap: 16px;
+    }
+  
+    .friend-photo {
+      width: 95px;
+      height: 95px;
+    }
+  
+    .friend-title-row h2 {
+      font-size: 27px;
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .brand {
+      font-size: 20px;
+    }
+  
+    .nav-link {
+      font-size: 12px;
+      padding: 7px;
+    }
+  
+    .top-avatar {
+      display: none;
+    }
+  
+    .page-intro {
+      gap: 10px;
+    }
+  
+    .page-intro h1 {
+      font-size: 30px;
+    }
+  
+    .page-intro p {
+      font-size: 12px;
+    }
+  
+    .friends-total {
+      min-width: 82px;
+    }
+  
+    .friends-total span {
+      font-size: 10px;
+    }
+  
+    .friend-main {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .friend-photo {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .friend-actions {
+      justify-content: stretch;
+    }
+  
+    .message-btn,
+    .follow-btn {
+      flex: 1;
+      min-width: 0;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .friend-lightbox,
+    .lightbox-image {
+      animation: none;
+    }
+  }
+  

@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My Friends | SniffNet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="friends.css">
+  <script src="friends.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-icon">✿</span>
+        SniffNet
+        <span class="brand-sparkle">✦</span>
+      </a>
+
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Explore</a>
+
+        <a href="friends.html"
+           class="nav-link active"
+           aria-current="page">Friends</a>
+
+        <a href="profile.html" class="nav-link">My Profile</a>
+      </nav>
+
+      <a href="profile.html"
+         class="top-avatar"
+         aria-label="Pineapple's profile">
+        <img src="assets/avatar/Pineapple.jpg" alt="Pineapple">
+      </a>
+
+    </div>
+  </header>
+
+  <main class="friends-page">
+
+    <div class="page-intro">
+      <div>
+        <h1>My Friends <span>✿</span></h1>
+        <p>Good friends make every day a little warmer.</p>
+      </div>
+
+      <div class="friends-total">
+        <strong>4</strong>
+        <span>Furry Friends</span>
+      </div>
+    </div>
+
+    <div class="friends-collection">
+
+      <article class="friend-card">
+        <div class="friend-main">
+
+          <div class="friend-photo">
+            <button class="friend-photo-trigger"
+                    type="button"
+                    data-full-image="assets/friends/Lamy.jpg"
+                    data-friend-name="Lamy"
+                    aria-label="View Lamy's full profile picture"
+                    aria-haspopup="dialog">
+              <img src="assets/friends/Lamy.jpg" alt="Lamy">
+            </button>
+
+            <span class="status-dot online"
+                  title="Online"
+                  aria-label="Online"></span>
+          </div>
+
+          <div class="friend-details">
+
+            <div class="friend-title-row">
+              <h2>Lamy</h2>
+              <span class="status-label online-label">● Online</span>
+            </div>
+
+            <p class="friend-species">
+              Maine Coon
+              <span class="detail-divider">|</span> ♂
+            </p>
+
+            <p class="friend-location">
+              <span aria-hidden="true">📍</span>
+              Kunshan, Suzhou, China 🇨🇳
+            </p>
+
+            <div class="friend-bio">
+              <span class="bio-label">A LITTLE ABOUT ME</span>
+              <p>Gulu sauce, Gulu sauce, I love Gulu sauce!</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="friend-actions">
+          <a href="chat.html?friend=Lamy" class="message-btn">
+            <span aria-hidden="true">✉</span> Message
+          </a>
+
+          <button class="follow-btn following"
+                  type="button"
+                  aria-pressed="true">
+            ✓ Following
+          </button>
+        </div>
+      </article>
+
+      <article class="friend-card">
+        <div class="friend-main">
+
+          <div class="friend-photo">
+            <button class="friend-photo-trigger"
+                    type="button"
+                    data-full-image="assets/friends/Pico.jpg"
+                    data-friend-name="Pico"
+                    aria-label="View Pico's full profile picture"
+                    aria-haspopup="dialog">
+              <img src="assets/friends/Pico.jpg" alt="Pico">
+            </button>
+
+            <span class="status-dot online"
+                  title="Online"
+                  aria-label="Online"></span>
+          </div>
+
+          <div class="friend-details">
+
+            <div class="friend-title-row">
+              <h2>Pico</h2>
+              <span class="status-label online-label">● Online</span>
+            </div>
+
+            <p class="friend-species">
+              Chinese Sparrow Cat
+              <span class="detail-divider">|</span> ♀
+            </p>
+
+            <p class="friend-location">
+              <span aria-hidden="true">📍</span>
+              Kunshan, Suzhou, China 🇨🇳
+            </p>
+
+            <div class="friend-bio">
+              <span class="bio-label">A LITTLE ABOUT ME</span>
+              <p>I'm tiny, so what? Good things come in small packages!</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="friend-actions">
+          <a href="chat.html?friend=Pico" class="message-btn">
+            <span aria-hidden="true">✉</span> Message
+          </a>
+
+          <button class="follow-btn following"
+                  type="button"
+                  aria-pressed="true">
+            ✓ Following
+          </button>
+        </div>
+      </article>
+
+      <article class="friend-card">
+        <div class="friend-main">
+
+          <div class="friend-photo">
+            <button class="friend-photo-trigger"
+                    type="button"
+                    data-full-image="assets/friends/McDull.jpg"
+                    data-friend-name="McDull"
+                    aria-label="View McDull's full profile picture"
+                    aria-haspopup="dialog">
+              <img src="assets/friends/McDull.jpg" alt="McDull">
+            </button>
+
+            <span class="status-dot offline"
+                  title="Offline"
+                  aria-label="Offline"></span>
+          </div>
+
+          <div class="friend-details">
+
+            <div class="friend-title-row">
+              <h2>McDull</h2>
+              <span class="status-label offline-label">● Offline</span>
+            </div>
+
+            <p class="friend-species">
+              Siberian Cat
+              <span class="detail-divider">|</span> ♀
+            </p>
+
+            <p class="friend-location">
+              <span aria-hidden="true">📍</span>
+              Qinhuai District, Nanjing, China 🇨🇳
+            </p>
+
+            <div class="friend-bio">
+              <span class="bio-label">A LITTLE ABOUT ME</span>
+              <p>Leave me in peace. Wake me up when there are treats.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="friend-actions">
+          <a href="chat.html?friend=McDull" class="message-btn">
+            <span aria-hidden="true">✉</span> Message
+          </a>
+
+          <button class="follow-btn following"
+                  type="button"
+                  aria-pressed="true">
+            ✓ Following
+          </button>
+        </div>
+      </article>
+
+      <article class="friend-card">
+        <div class="friend-main">
+
+          <div class="friend-photo">
+            <button class="friend-photo-trigger"
+                    type="button"
+                    data-full-image="assets/friends/Ocean.jpg"
+                    data-friend-name="Ocean"
+                    aria-label="View Ocean's full profile picture"
+                    aria-haspopup="dialog">
+              <img src="assets/friends/Ocean.jpg" alt="Ocean">
+            </button>
+
+            <span class="status-dot offline"
+                  title="Offline"
+                  aria-label="Offline"></span>
+          </div>
+
+          <div class="friend-details">
+
+            <div class="friend-title-row">
+              <h2>Ocean</h2>
+              <span class="status-label offline-label">● Offline</span>
+            </div>
+
+            <p class="friend-species">
+              Ragdoll
+              <span class="detail-divider">|</span> ♂
+            </p>
+
+            <p class="friend-location">
+              <span aria-hidden="true">📍</span>
+              Jianghan District, Wuhan, China 🇨🇳
+            </p>
+
+            <div class="friend-bio">
+              <span class="bio-label">A LITTLE ABOUT ME</span>
+              <p>Socially anxious. Do not disturb.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="friend-actions">
+          <a href="chat.html?friend=Ocean" class="message-btn">
+            <span aria-hidden="true">✉</span> Message
+          </a>
+
+          <button class="follow-btn following"
+                  type="button"
+                  aria-pressed="true">
+            ✓ Following
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    SniffNet © 2060 · Every little creature deserves a voice ♡
+  </footer>
+
+  <div class="friend-lightbox"
+       id="friend-lightbox"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Friend's profile picture"
+       hidden>
+
+    <button class="lightbox-close"
+            type="button"
+            aria-label="Close image preview">×</button>
+
+    <img class="lightbox-image"
+         id="lightbox-image"
+         alt="">
+
+  </div>
+
+</body>
+</html>
